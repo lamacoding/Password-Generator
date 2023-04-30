@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="pwgen.js"></script>
+    <title>MDiaz' Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <p id="headline-top">Generate a</hp><br /><p id="headline-bottom">random password</p>
+        <p id="subtitle">Never use an insecure password again.</p>
+        <button id="btn-generate-password" onclick="renderPasswords()">Generate passwords</button>
+        <hr>
+        <div class="output-container">
+            <button class="button-output" id="generated-password-1" onclick="copyPassword(1)"></button>
+            <button class="button-output" id="generated-password-2" onclick="copyPassword(2)"></button>
+        </div>
+        <p id="notification-copied">Copied!</p>
+    </div>
+</body>
+</html>

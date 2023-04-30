@@ -1,0 +1,99 @@
+* {
+    font-family: 'Rubik', Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242C3A;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: #374359;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#headline-top {
+    font-weight: 500;
+    font-size: 32px;
+    color: white;
+    margin: 2px 0;
+}
+
+#headline-bottom {
+    font-size: 32px;
+    color: turquoise;
+    margin: 2px 0;
+}
+
+#subtitle {
+    color: #DADADA;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: turquoise;
+    color: #333333;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px turquoise;
+}
+
+#btn-generate-password {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#btn-generate-password:active {
+    background-color: rgb(57, 204, 189);
+}
+
+hr {
+    width: 100%;
+    border: thin solid #353C4A;
+}
+
+.output-container {
+    display: flex;
+}
+
+.button-output {
+    height: 40px;
+    background-color: #4A5B79;
+    color: white;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.button-output:hover {
+    box-shadow: 0px 0px 10px #4A5B79;
+}
+
+#generated-password-1 {
+    margin-right: 5px;
+}
+
+#generated-password-2 {
+    margin-left: 5px;
+}
+
+#notification-copied {
+    visibility: hidden;
+    color: #DADADA;
+    font-style: italic;
+}
