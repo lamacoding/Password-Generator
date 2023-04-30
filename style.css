@@ -30,6 +30,7 @@ body {
 }
 
 #headline-bottom {
+    font-weight: 500;
     font-size: 32px;
     color: turquoise;
     margin: 2px 0;
