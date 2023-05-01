@@ -3,10 +3,6 @@ const smallLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const specialCharacters = ['!', '@', '#', '$', '%', '&', '*', '+', '-', '.', '/', '=', '?', '^', '_', '|', '~'];
 
-
-
-let requestedPasswordLength = 15;
-
 function renderPasswords() {
     document.getElementById("generated-password-1").textContent = generatePassword();
     document.getElementById("generated-password-2").textContent = generatePassword();
@@ -17,6 +13,8 @@ function generatePassword() {
     let hasSmallLetters = document.getElementById("smallLetters").checked;
     let hasNumbers = document.getElementById("numbers").checked;
     let hasSpecialCharacters = document.getElementById("specialCharacters").checked;
+
+    let requestedPasswordLength = document.getElementById("passwordLength").value;
 
     if(!hasCapitalLetters && !hasSmallLetters && !hasNumbers && !hasSpecialCharacters) {
         console.error("Cannot generate password without a character set.");
@@ -45,4 +43,8 @@ function copyPassword(pwID) {
     setTimeout(function() {
         document.getElementById("notification-copied").style.visibility = "hidden";
       }, 3000);
+}
+
+function updatePasswordLengthValue() {
+    document.getElementById("valuePasswordLength").textContent = document.getElementById("passwordLength").value;
 }

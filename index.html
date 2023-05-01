@@ -31,11 +31,16 @@
             <input type="checkbox" id="specialCharacters" value="specialCharacters">
             <label for="specialCharacters">Special characters</label>
         </div>
+        <div>
+            <br /><label for="passwordLength">Number of characters</label><br /><br />
+            <input type="range" id="passwordLength" value="15" min="10" max="100" oninput="updatePasswordLengthValue()">
+            <span id="valuePasswordLength">15</span>
+        </div>
         <button id="btn-generate-password" onclick="renderPasswords()">Generate passwords</button>
         <hr>
         <div class="output-container">
-            <button class="button-output" id="generated-password-1" onclick="copyPassword(1)"></button>
-            <button class="button-output" id="generated-password-2" onclick="copyPassword(2)"></button>
+            <span class="span-output" id="generated-password-1" onclick="copyPassword(1)"></span>
+            <span class="span-output" id="generated-password-2" onclick="copyPassword(2)"></span>
         </div>
         <p id="notification-copied">Copied!</p>
     </div>
