@@ -15,6 +15,22 @@
     <div class="container">
         <p id="headline-top">Generate a</hp><br /><p id="headline-bottom">random password</p>
         <p id="subtitle">Never use an insecure password again.</p>
+        <div class="checkbox-props">
+            <input type="checkbox" id="capitalLetters" value="capitalLetters" checked>
+            <label for="capitalLetters">Capital letters</label>
+        </div>
+        <div class="checkbox-props">
+            <input type="checkbox" id="smallLetters" value="smallLetters" checked>
+            <label for="smallLetters">Small letters</label>
+        </div>
+        <div class="checkbox-props">
+            <input type="checkbox" id="numbers" value="numbers">
+            <label for="numbers">Numbers</label>
+        </div>
+        <div class="checkbox-props">
+            <input type="checkbox" id="specialCharacters" value="specialCharacters">
+            <label for="specialCharacters">Special characters</label>
+        </div>
         <button id="btn-generate-password" onclick="renderPasswords()">Generate passwords</button>
         <hr>
         <div class="output-container">

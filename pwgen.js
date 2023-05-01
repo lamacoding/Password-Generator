@@ -3,10 +3,7 @@ const smallLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l'
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const specialCharacters = ['!', '@', '#', '$', '%', '&', '*', '+', '-', '.', '/', '=', '?', '^', '_', '|', '~'];
 
-let hasCapitalLetters = true;
-let hasSmallLetters = true;
-let hasNumbers = true;
-let hasSpecialCharacters = true;
+
 
 let requestedPasswordLength = 15;
 
@@ -16,6 +13,16 @@ function renderPasswords() {
 }
 
 function generatePassword() {
+    let hasCapitalLetters = document.getElementById("capitalLetters").checked;
+    let hasSmallLetters = document.getElementById("smallLetters").checked;
+    let hasNumbers = document.getElementById("numbers").checked;
+    let hasSpecialCharacters = document.getElementById("specialCharacters").checked;
+
+    if(!hasCapitalLetters && !hasSmallLetters && !hasNumbers && !hasSpecialCharacters) {
+        console.error("Cannot generate password without a character set.");
+        return;
+    }
+
     let passwordCharacters = [];
     let generatedPassword = "";
 
