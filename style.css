@@ -2,7 +2,6 @@
     font-family: 'Rubik', Verdana, sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #DADADA;
 }
 body, html {
     height: 100%;
@@ -11,14 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #242C3A;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     width: 400px;
-    background-color: #374359;
     padding: 40px 40px 20px 40px;
     border-radius: 20px;
 }
@@ -26,7 +23,6 @@ body {
 #headline-top {
     font-weight: 500;
     font-size: 32px;
-    color: white;
     margin: 2px 0;
 }
 
@@ -40,32 +36,7 @@ body {
 #subtitle {
     margin-bottom: 30px;
 }
-/*
-input[type="checkbox"] {
-    display: none /*hide checkbox as standard can not be styled;
-}
 
-label::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 10px;
-    border: 1px solid #DADADA;
-    border-radius: 3px;
-  }
-  
-input[type="checkbox"]:checked + label::before #label-cb {
-    content: "";
-    width: 12px;
-    height: 12px;
-    font-size: 10px;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: turquoise;
-    border-color: turquoise;
-}
-*/
 .checkbox-props {
     margin-bottom: 10px;
 }
@@ -106,19 +77,55 @@ hr {
 
 .span-output {
     border-radius: 8px;
-    background-color: #4A5B79;
-    color: white;
     margin-top: 10px;
     padding: 10px;
     overflow: auto;
     cursor:pointer;
 }
 
-.button-output:hover {
-    box-shadow: 0px 0px 10px #4A5B79;
-}
-
 #notification-copied {
     visibility: hidden;
     font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+    * {
+        color: #333333;
+    }
+
+    body {
+        background-color: #242C3A;
+    }
+
+    .container {
+        background-color: rgb(231, 231, 231);
+    }
+
+    #headline-top {
+        color: #333333;
+    }
+
+    .span-output {
+        background-color: rgb(209, 214, 219);
+        color: #333333;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #DADADA;
+    }
+
+    body {
+        background-color: #242C3A;
+    }
+
+    .container {
+        background-color: #374359;
+    }
+
+    .span-output {
+        background-color: #4A5B79;
+        color: white;
+    }
 }
