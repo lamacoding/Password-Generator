@@ -110,7 +110,7 @@ hr {
     color: white;
     margin-top: 10px;
     padding: 10px;
-    overflow: scroll;
+    overflow: auto;
     cursor:pointer;
 }
 
