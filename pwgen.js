@@ -17,7 +17,7 @@ function generatePassword() {
     let requestedPasswordLength = document.getElementById("passwordLength").value;
 
     if(!hasCapitalLetters && !hasSmallLetters && !hasNumbers && !hasSpecialCharacters) {
-        console.error("Cannot generate password without a character set.");
+        console.error("Can't generate password without a character set.");
         return;
     }
 
